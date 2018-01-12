@@ -17,8 +17,7 @@ public class ReverseString {
 	
 	public String Reverse(String param) {
 		
-		String result = "";
-		
+		String result = "";		
 		for(int i=param.length()-1; i>=0; i--) {
 			result += param.charAt(i);
 		}
@@ -26,13 +25,11 @@ public class ReverseString {
 		return result;
 	}
 	
-	
 	public static void main(String[] args) {
 		
 		ReverseString Reverse = new ReverseString();
 		
-		System.out.println("Result : "+Reverse.Reverse("apple"));
-        //Result : elppa
+		System.out.println("Result : "+Reverse.Reverse("apple"));        
 		
 	}
 }
@@ -40,3 +37,4 @@ public class ReverseString {
 
 코드를 보면 ```Reverse ``` 함수에서 문자열 파라미터를 읽어서 루프를 돌면서 역으로 하나씩 읽는다.
 그리고 읽어들인 문자를 ```result``` 라는 문자열에 하나씩 넣는다.
+결과적으로 위의 코드에선 ```result```에 elppa 라는 문자열이 저장된다.
