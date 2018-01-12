@@ -6,7 +6,7 @@ highlighter:      rouge
 title:            PJI114
 tagline:          'A Jekyll theme'
 description:      '공부인듯 공부아닌 공부같은'
-url:              https://fongandrew.github.io/hydeout
+url:              https://pji114.github.io
 baseurl:          # the optional subpath of your site, e.g. "/blog"
                   # NB: This applies to all pages in your Jekyll site.
                   # If you want to move just the blog index pages but keep
@@ -15,7 +15,7 @@ baseurl:          # the optional subpath of your site, e.g. "/blog"
 
 author:
   name:           'PJI114'
-  url:            pji114.github.io
+  url:            https://pji114.github.io
 
 paginate:         5
 # paginate_path:    '/page:num'

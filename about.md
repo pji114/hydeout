@@ -1,13 +1,11 @@
 ---
 layout: page
 title: About
-sidebar_link: true
+sidebar_link: false
 ---
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it
-  for your own use upon downloading. Carry on!
-</p>
+학교에서 배우는 알고리즘이든 디자인패턴이든 이론수업은 그저 이론이라 생각했다
+그래서 지금까지 당장 눈앞에 있는 업무를 진행하기 위해 그저 생각 나는대로 프로그램을 작성했다.
+지금에와서 그런 모래성 같은 프로그램을 보니 너무나 부실해보였고. 언젠가 그 성이 무너지면 지금까지 내가 열심히(~~빡세게~~)만든 프로그램들이 모두 부질없어 질것 같았다.
 
-To make pages show up in the sidebar, add `sidebar_link: true` to the front
-matter.
+하여 이제라도 작은 초가집 같은 프로그램이라도 만들 때 좀 튼튼하게 지어보고자 한다
