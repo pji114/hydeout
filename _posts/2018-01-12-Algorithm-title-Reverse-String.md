@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Markup: Title with Special&nbsp;---&nbsp;Characters"
+title: "Algorithm: 문자열 뒤집기"
 categories:
   - Algorithm
 

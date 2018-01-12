@@ -1,7 +1,6 @@
 ---
-layout: post
-title: "Markup: Title with Special&nbsp;---&nbsp;Characters"
-categories:
-  - Algorithm
-last_modified_at: 2018-01-12
+layout: category
+title: Algorithm
 ---
+
+초등학생들도 이해 할 정도로 만들어보자 ~~(요새 초등학생들 똑똑하다)~~
