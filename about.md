@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-sidebar_link: false
+sidebar_link: true
 ---
 
 학교에서 배우는 알고리즘이든 디자인패턴이든 이론수업은 그저 이론이라 생각했다
