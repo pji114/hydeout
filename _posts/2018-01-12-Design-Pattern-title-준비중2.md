@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Design Pattern: 준비중"
+title: "Design Pattern: 준비중2"
 categories:
   - Design Pattern
 
