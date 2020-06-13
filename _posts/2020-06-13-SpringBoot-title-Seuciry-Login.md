@@ -2,7 +2,9 @@
 layout: post
 title: "Spring Securiy를 이용하여 Login 기능을 구현해본다"
 categories:
-  - Spring_Boot
+  - SpringBoot
+
+last_modified_at: 2020-06-13
 ---
 
 # 일단 WebSecurityConfigurerAdapter 클래스르 상속 받는 보안설정을 구현해보자
@@ -59,7 +61,7 @@ antMatchers의 [/user/login", "/user/logout", "/static/**", "/denied/**", "/css/
 3. failureHandler : 로그인 실패시 처리해야 될 작업이 있다면 실패 한들러를 만들어 두고 여기 등록 해 둔다.
 
 위 처럼 설정하면 Spring Security가 제공 해주는 기본적인 로그인 페이지를 볼수 있다
-<img src="/_screenshots/Security_Default_Login.png" width="450px" height="300px" title="기본 로그인 화면"></img>
+<img src="_screenshots/Security_Default_Login.png" width="450px" height="300px" title="기본 로그인 화면"></img>
 
 ### 커스텀 로그인 페이지 설정(로그인 컨트롤러 필요함)
 여백의 미를 사랑하고 디자인 따위는 사치라고 생각하는 사람이면 위처럼 써도 무방하나(~~귀찮거나~~) 보통은 사이트 용도에 맞도록 수정해서 로그인 페이지를 쓸것이다. 그럴떈 아래처럼 쓰자
@@ -83,4 +85,4 @@ http.formLogin()
 6. failureHandler : 로그인 실패시 처리해야 될 작업이 있다면 실패 한들러를 만들어 두고 여기 등록 해 둔다.
 
 위처럼 설정하면 아래와 같이 커스텀한 로그인 페이지를 볼수있다.
-<img src="/_screenshots/Custom_Login.png" width="450px" height="300px" title="커스텀 로그인 화면"></img>
+<img src="_screenshots/Custom_Login.png" width="450px" height="300px" title="커스텀 로그인 화면"></img>

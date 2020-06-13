@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Spring_Boot
+title: SpringBoot
 ---
 
 
