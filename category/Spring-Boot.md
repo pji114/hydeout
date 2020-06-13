@@ -1,6 +1,6 @@
 ---
 layout: category
-title: Design Pattern
+title: Spring Boot
 ---
 
 
