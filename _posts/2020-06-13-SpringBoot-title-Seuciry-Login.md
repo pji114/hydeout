@@ -1,13 +1,12 @@
 ---
 layout: post
-title: "Spring Securiy를 이용하여 Login 기능을 구현해본다"
+title: "SecurityConfig 설정"
 categories:
   - SpringBoot
 
 last_modified_at: 2020-06-13
 ---
-
-# 일단 WebSecurityConfigurerAdapter 클래스르 상속 받는 보안설정을 구현해보자
+WebSecurityConfigurerAdapter 클래스를 상속받는 접근권한 및 로그인 설정 함수인 SecurityConfig 을 구현한다.
 
 ```java
 @Configuration
@@ -26,12 +25,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 }
 ```
-## @Configuration
-클래스를 환경설정 클래스로 선언한다
-## @EnableGlobalMethodSecurity
-어노테이션 기반의 보안 활성화
+# Annotaion 설명
+1. @Configuration : 클래스를 환경설정 클래스로 선언한다
+2. @EnableGlobalMethodSecurity : 어노테이션 기반의 보안 활성화 
 
-## configure(HttpSecurity http) 
+# configure(HttpSecurity http) 
 페이지 접근권한 설정, 접근권한은 사용자의 권한으로도, 아니면 페이지 자체로도 적용할수 있다. 지금은 권한 기반이 아닌 주소기반으로 접근권한 설정을 한다.
 1. http.authorizeRequests() : Security 처리에 HttpServletRequest을 사용한다는 것을 의미한다
 2. .antMatchers(".....") : 해당 경로에에 위치하는 페이지들을 의미한다, 예를들어/user/login 이라하면 user경로 아래 login 파일을 의미하며 /css/** 이라하면 css 아래 모든 파일을 의미한다.
@@ -61,7 +59,7 @@ antMatchers의 [/user/login", "/user/logout", "/static/**", "/denied/**", "/css/
 3. failureHandler : 로그인 실패시 처리해야 될 작업이 있다면 실패 한들러를 만들어 두고 여기 등록 해 둔다.
 
 위 처럼 설정하면 Spring Security가 제공 해주는 기본적인 로그인 페이지를 볼수 있다
-<img src="_screenshots/Security_Default_Login.png" width="450px" height="300px" title="기본 로그인 화면"></img>
+![커스텀 로그인](/assets/img/Security_Default_Login.PNG)
 
 ### 커스텀 로그인 페이지 설정(로그인 컨트롤러 필요함)
 여백의 미를 사랑하고 디자인 따위는 사치라고 생각하는 사람이면 위처럼 써도 무방하나(~~귀찮거나~~) 보통은 사이트 용도에 맞도록 수정해서 로그인 페이지를 쓸것이다. 그럴떈 아래처럼 쓰자
@@ -85,4 +83,4 @@ http.formLogin()
 6. failureHandler : 로그인 실패시 처리해야 될 작업이 있다면 실패 한들러를 만들어 두고 여기 등록 해 둔다.
 
 위처럼 설정하면 아래와 같이 커스텀한 로그인 페이지를 볼수있다.
-![ex_screenshot](/assets/img/Custom_Login.PNG)
+![커스텀 로그인](/assets/img/Custom_Login.PNG)
