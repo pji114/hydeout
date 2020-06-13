@@ -31,7 +31,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 ## @EnableGlobalMethodSecurity
 어노테이션 기반의 보안 활성화
 
-##configure(HttpSecurity http) 
+## configure(HttpSecurity http) 
 페이지 접근권한 설정, 접근권한은 사용자의 권한으로도, 아니면 페이지 자체로도 적용할수 있다. 지금은 권한 기반이 아닌 주소기반으로 접근권한 설정을 한다.
 1. http.authorizeRequests() : Security 처리에 HttpServletRequest을 사용한다는 것을 의미한다
 2. .antMatchers(".....") : 해당 경로에에 위치하는 페이지들을 의미한다, 예를들어/user/login 이라하면 user경로 아래 login 파일을 의미하며 /css/** 이라하면 css 아래 모든 파일을 의미한다.
@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 4. .anyRequest() : 이 페이지로 들어오는 모든 요청을 의미한다.
 5. .authenticated() : 이 설정이 적용된 페이지는 보안 인가가 필요하다.
 
-##여기서 http.authorizeRequests()까지 설정의 의미
+## 여기서 http.authorizeRequests()까지 설정의 의미
 antMatchers의 [/user/login", "/user/logout", "/static/**", "/denied/**", "/css/**", "/js/**", "/img/**", "/scss/**", "/vendor/**] 경로로 들어오는 요청은 permitAll 설정에 따라 모두 허가한다
 그리고 anyRequest 이 설정에 따라 나머지 모든 요청은 authenticated 이 설정에 의해 인증이 필요하다
 
@@ -85,4 +85,6 @@ http.formLogin()
 6. failureHandler : 로그인 실패시 처리해야 될 작업이 있다면 실패 한들러를 만들어 두고 여기 등록 해 둔다.
 
 위처럼 설정하면 아래와 같이 커스텀한 로그인 페이지를 볼수있다.
-<img src="_screenshots/Custom_Login.png" width="450px" height="300px" title="커스텀 로그인 화면"></img>
+<img src="/css/images/Custom_Login.png" width="450px" height="300px" title="커스텀 로그인 화면"></img>
+<img data-action="zoom" src='{{ "/assets/img/Custom_Login.png" | relative_url }}' alt='relative'>
+![Image Alt 텍스트](/assets/img/Custom_Login.png)
