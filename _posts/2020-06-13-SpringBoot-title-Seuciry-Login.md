@@ -85,4 +85,4 @@ http.formLogin()
 6. failureHandler : 로그인 실패시 처리해야 될 작업이 있다면 실패 한들러를 만들어 두고 여기 등록 해 둔다.
 
 위처럼 설정하면 아래와 같이 커스텀한 로그인 페이지를 볼수있다.
-![ex_screenshot](./assets/img/Custom_Login.PNG)
+![ex_screenshot](/assets/img/Custom_Login.PNG)
