@@ -2,7 +2,7 @@
 layout: post
 title: "Spring Securiy를 이용하여 Login 기능을 구현해본다"
 categories:
-  - Spring-Boot
+  - Spring_Boot
 ---
 
 # 일단 WebSecurityConfigurerAdapter 클래스르 상속 받는 보안설정을 구현해보자
