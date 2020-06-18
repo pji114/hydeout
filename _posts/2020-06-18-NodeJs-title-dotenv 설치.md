@@ -17,7 +17,7 @@ NodeJs의 경우는 해당 서비스가 배포되는 로컬환경의 환경변�
 1. npm install dotenv
 2. 프로젝트 최상단에 .env 파일 생성
 
-끝(~~~쉽다~~~)
+끝(~~쉽다~~)
 
 ## .env 파일 설정
 ````..env
@@ -37,7 +37,7 @@ console.log("ENV OPT : "+process.env.NODE_ENV);
 2. console.log("ENV OPT : "+process.env.NODE_ENV)
  - process.env로 접근해서 .env 파일에서 선언한 NODE_ENV 변수의 값을 가져온다.
  
-끝(~~~쉽다2~~~)
+끝(~~쉽다2~~)
 
 기본적으로 이렇게 각 배포환경에 맞게 분기를 탈수 있는 env 파일을 만들어 두고 필요시 분기해서 개발을 하면된다.
 단, env 파일은 각 배포환경마다 다를것이기 때문에 변경하지 않도록 해야한다 처음에 파일을 생성해놓고 git ingnore에 추가하는것도 좋은 방법인것 같다.
