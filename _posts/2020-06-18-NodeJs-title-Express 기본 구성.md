@@ -18,3 +18,21 @@ Nodejs 에서 사용하는 대표적인 프레임 워크는 express가 있다. �
 4. view : 웹 에서 화면을 그릴때 보여줄 파일, 여기서는 ejs 템플릿 엔진을 사용한다.
 5. app.js : 미들웨어 코드
 6. package.json : 이 프로젝트에 대한 버전 정보 등
+
+## www
+여기서 중요한 소스들을 보자
+```javascript
+var app = require('../app');
+var http = require('http');
+var port = normalizePort(process.env.PORT || '3000');
+app.set('port', port);
+var server = http.createServer(app);
+server.listen(port);
+```
+
+1. var app = require('../app'); : app 모듈을 가져온다
+2. var http = require('http'); http 모듈을 가져온다. 
+3. var port = normalizePort(process.env.PORT || '3000');  (process.env.PORT 이건 express가 환경변수에 접근하는곳인데 나중에 알아보자)
+   app.set('port', port); : 이 서버의 포트를 3000번으로 지정한다.
+4. var server = http.createServer(app);
+   server.listen(port); : 서버를 3000번 포트로 구동한다.
