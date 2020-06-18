@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "NodeJs: Express 기본 구성"
+title: "NodeJs: dotenv 설치"
 categories:
   - NodeJs
 
