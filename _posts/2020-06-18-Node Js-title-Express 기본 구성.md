@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Node Js: Express 기본 구성"
+title: "NodeJs: Express 기본 구성"
 categories:
   - NodeJs
 
