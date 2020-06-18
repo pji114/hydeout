@@ -32,7 +32,28 @@ server.listen(port);
 
 1. var app = require('../app'); : app 모듈을 가져온다
 2. var http = require('http'); http 모듈을 가져온다. 
-3. var port = normalizePort(process.env.PORT || '3000');  (process.env.PORT 이건 express가 환경변수에 접근하는곳인데 나중에 알아보자)
-   app.set('port', port); : 이 서버의 포트를 3000번으로 지정한다.
+3. var port = normalizePort(process.env.PORT || '3000');
+   app.set('port', port); 
+   : 이 서버의 포트를 3000번으로 지정한다. (process.env.PORT 이건 express가 환경변수에 접근하는곳인데 나중에 알아보자)
 4. var server = http.createServer(app);
-   server.listen(port); : 서버를 3000번 포트로 구동한다.
+   server.listen(port); 
+   : 서버를 3000번 포트로 구동한다.
+   
+## app.js
+미들웨어 처리부분을 하는 파일이다. 중요한 부분을 살펴보자
+
+```javascript
+var app = express();
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+```
+1. var app = express() : express 모듈을 가져온다.
+2. app.set('views', path.join(__dirname, 'views')) : 이 express 모듈의 view 경로를 설정한다
+3. app.set('view engine', 'ejs') : 템플릿 엔진은 ejs를 쓰겠다
+4. app.use('/', indexRouter) : spring의 Controller의 prefix 설정이다 "/" 이걸로 접근시 routes/index.js에 접근한다.
+5. app.use('/users', usersRouter) : 4번과 동일하게 /users로 접근시 routes/users.js에 접근한다.
+
+기본 설정들이라 별로 볼게 없다. 다음엔 로컬환경의 환경변수에 접근하여 배포 환경에 맞도록 설정을 잡아보자 (spring의 properties와 같이)
